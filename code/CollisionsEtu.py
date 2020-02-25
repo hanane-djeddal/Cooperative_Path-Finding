@@ -31,7 +31,14 @@ def recalculChemin1(suivant,precedent,pos,chemin,wallStates,nbreCol,nbreLig) :
                 res.append(chemin[i])
     return res
 
-def strategie1(game,players,initStates,goalStates,wallStates,nbreCol,nbreLig):
+def strategie1(p):
+    game=p.game
+    players=p.players
+    initStates=p.init
+    goalStates=p.but
+    wallStates=p.wall
+    nbreCol=p.colonnes
+    nbreLig=p.lignes
     nbPlayers = len(players)
     score = [0]*nbPlayers
     chemins=[] #liste des chemins des joueurs
