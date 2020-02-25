@@ -18,3 +18,24 @@ On propose trois stratégies:
 * stratégie opportuniste de portionnement de chemins ("path slicing", voir ici). Il s'agit, lorsqu'un conflit est constaté, de recalculer une petite partie du chemin actuel en prenant en compte l'obstacle détecté.
 * stratégie coopérative de base: il s'agit d'identifier des chemins qui ne partagent aucune case. De manière évidente, ces chemins peuvent alors être éxécutés en parallèle par les personnages en étant certain de ne pas entrer en collision. Reste alors à organiser l'ordre de passage.
 * stratégie coopérative avancée: l'idée générale est d'utiliser une structure partagée, une table de réservation spatio-temporelle, où les cases sont désormais un triplet $(x,y,t)$. Il faut alors planifier dans cette nouvelle dimension.
+
+
+
+
+
+# Methods and means of AI and OR
+In this project, we consider a competition between different game characters where each player tries to find their own treasure.
+
+We wish to avoid collision between characters, i.e we wish that every agent has an algorithm that allows them to avoid other characters. These following situations are considered collisions:
+
+* Being in the same place at the same time, or
+* Two characters "cross paths"
+
+We propose three strategies: 
+
+
+* Opportunist.
+* Cooperative.
+* Advanced Cooperative
+
+
